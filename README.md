@@ -1,27 +1,27 @@
 # A Simple Symfony API with users and their skills 
 
-You will need php installed;
+Needs mysql, php and composer installed;
 
 Run CMD,
 navigate to our project folder then:
 
-# install composer
+# installing composer dependencies
 composer install
 
-# setup our database
+# setting up mysql database in .env file
 
 edit .env file in DATABASE_URL line with your mysql login:pass@ip:port/database_name 
 
 DATABASE_URL=mysql://login:password@127.0.0.1:3306/api_db
 
-# using doctrine to manager our db
+# using doctrine to manage db
 create our database based on .env file config:
 php bin/console doctrine:database:create
 
 then running the migrations to create the tables in our db:
 php bin/console doctrine:migrations:migrate
 
-# to run with built-in web server:
+# running with php built-in web server:
 php -S localhost:8080 -t public
 
 # endpoints 
